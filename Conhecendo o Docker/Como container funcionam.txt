@@ -1,0 +1,14 @@
+Nesta aula do curso "Docker: criando e gerenciando containers", o instrutor Daniel Artine aborda como os containers funcionam e suas principais características.
+
+Os containers são mais leves que máquinas virtuais porque operam como processos diretamente no sistema operacional, sem a necessidade de virtualização completa. O consumo de recursos é menor, pois eles não requerem a instalação de um sistema operacional completo.
+
+Para garantir o isolamento entre os containers e o sistema operacional, são utilizados os namespaces. Os principais namespaces mencionados são:
+
+PID: isola processos dentro de cada container.
+NET: isola interfaces de rede.
+IPC: gerencia a intercomunicação entre processos.
+MNT: isola o sistema de arquivos.
+UTS: permite acesso isolado ao kernel do sistema original.
+Além disso, os Cgroups são introduzidos como uma forma de gerenciar recursos, permitindo definir limites de consumo de memória e CPU para cada container.
+
+A aula conclui que, graças aos namespaces e Cgroups, é possível garantir o isolamento e o gerenciamento eficiente dos containers, preparando o aluno para os próximos passos do curso, que incluem a instalação do Docker.
