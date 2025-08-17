@@ -1,0 +1,21 @@
+Nesta aula, aprendemos sobre o fluxo de criação e execução de containers no Docker, focando em como o comando docker run funciona e o que mantém um container em execução.
+
+Principais pontos abordados:
+
+Por que o container para de funcionar?
+O container para porque, ao executar o comando inicial (como bash no Ubuntu), ele atinge seu objetivo e não há mais processos em execução para mantê-lo ativo.
+Para manter um container em execução, é necessário que ele tenha pelo menos um processo rodando continuamente.
+
+Como usar o comando docker ps:
+docker ps: Mostra os containers que estão em execução.
+docker ps -a (ou docker container ls -a): Mostra todos os containers, incluindo os que já foram finalizados.
+
+Exemplo prático com o comando sleep:
+Usamos o comando docker run ubuntu sleep 1d para manter o container Ubuntu em execução por um dia, pois o processo sleep impede que ele finalize imediatamente.
+
+O que acontece nos bastidores do docker run:
+Se a imagem especificada no docker run não estiver disponível localmente, o Docker a busca no Docker Hub.
+Após o download, o Docker valida a autenticidade da imagem usando digest e sha256.
+O container é então executado com o comando padrão da imagem (ex: bash no Ubuntu) ou com um comando especificado pelo usuário (ex: sleep 1d).
+
+Em resumo, para garantir que um container permaneça ativo, é crucial entender que ele precisa de um processo contínuo em execução. Além disso, o docker run facilita a busca, validação e execução de imagens, tanto locais quanto remotas.
