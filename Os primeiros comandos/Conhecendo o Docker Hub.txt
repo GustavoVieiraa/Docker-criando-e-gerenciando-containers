@@ -1,0 +1,7 @@
+Nesta aula do curso "Docker: criando e gerenciando containers", o instrutor Daniel Artine introduz o comando docker run e sua funcionalidade, utilizando a imagem hello world como exemplo. O aluno aprende que, ao executar docker run hello-world, o Docker tenta localizar a imagem localmente e, se não a encontra, realiza o download a partir do Docker Hub.
+
+O comando docker run é explicado em sua estrutura básica, que inclui opções e o nome da imagem a ser executada. O instrutor também destaca a importância do Docker Hub como repositório de imagens, onde é possível encontrar imagens oficiais, como a do Ubuntu.
+
+Além disso, a aula aborda a execução do comando docker pull para baixar imagens, e discute o que acontece nos bastidores quando um container é iniciado. O aluno é instigado a refletir sobre o que ocorre durante a execução do docker run, especialmente quando não há saída visível após iniciar um container baseado no Ubuntu.
+
+A aula termina com a promessa de esclarecer as questões sobre o funcionamento interno do docker run em vídeos futuros.
