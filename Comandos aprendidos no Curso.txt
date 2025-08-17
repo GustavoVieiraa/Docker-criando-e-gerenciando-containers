@@ -3,3 +3,15 @@ docker ps: Mostra os containers que estão em execução.
 docker ps -a (ou docker container ls -a): Mostra todos os containers, incluindo os que já foram finalizados.
 
 Usamos o comando docker run ubuntu sleep 1d para manter o container Ubuntu em execução por um dia, pois o processo sleep impede que ele finalize imediatamente.
+
+Vimos como interromper (docker stop).
+
+Reiniciar (docker start) containers.
+
+Interagir com eles em tempo real usando o docker exec.
+
+Os comandos docker pause e docker unpause, que permitem pausar e retomar a execução de um container, mantendo seu estado.
+
+Remover um container com o comando docker rm.
+
+ iniciar um container já com um terminal interativo usando docker run -it.

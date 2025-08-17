@@ -1,0 +1,7 @@
+Nesta aula, exploramos diversos comandos do Docker para gerenciar containers. Vimos como interromper (docker stop) e reiniciar (docker start) containers, além de como interagir com eles em tempo real usando o docker exec.
+
+Aprendemos também sobre os comandos docker pause e docker unpause, que permitem pausar e retomar a execução de um container, mantendo seu estado.
+
+Além disso, vimos como remover um container com o comando docker rm e como iniciar um container já com um terminal interativo usando docker run -it.
+
+O ponto chave da aula é entender o ciclo de vida dos containers e como gerenciá-los de forma eficiente.
