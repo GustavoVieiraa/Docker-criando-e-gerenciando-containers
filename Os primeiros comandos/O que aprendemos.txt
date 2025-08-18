@@ -1,0 +1,8 @@
+Nessa aula aprendemos:
+
+O Docker Hub é um grande repositório de imagens que podemos utilizar;
+
+A base dos containers são as imagens;
+
+Como utilizar comandos acerca do ciclo de vida dos containers, como: docker start, para iniciar um container que esteja parado; docker stop, para parar um que esteja rodando; docker pause, para pausar um container e docker unpause para iniciar um container pausado; 
+- Conseguimos mapear portas de um container com as flags -p e -P.
