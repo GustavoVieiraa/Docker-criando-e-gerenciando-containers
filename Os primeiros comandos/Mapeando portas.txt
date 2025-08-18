@@ -1,0 +1,33 @@
+Nesta aula do curso "Docker: criando e gerenciando containers", o instrutor Daniel Artine ensina sobre como interagir com containers Docker de forma mais eficiente, especialmente no que se refere ao mapeamento de portas.
+
+Aqui estão os principais pontos abordados:
+
+Execução de Aplicação Web em um Container:
+
+Em vez de usar o comando docker run ubuntu com o hello-world, o instrutor demonstra como executar uma aplicação web a partir de uma imagem do Docker Hub (dockersamples/static-site).
+Flag -d (Detached Mode):
+
+Para evitar que o terminal fique bloqueado enquanto o container está em execução, é utilizada a flag -d, que executa o container em segundo plano.
+Mapeamento de Portas:
+
+É explicado que, por padrão, as portas do container não são acessíveis diretamente pelo host devido ao isolamento de rede.
+Para acessar a aplicação web no container, é necessário mapear as portas do container para as portas do host.
+Flag -P (Publicar Portas):
+
+A flag -P (maiúscula) é utilizada para mapear automaticamente as portas do container para portas aleatórias no host.
+O comando docker port <container_id> é usado para descobrir quais portas do host foram mapeadas para as portas do container.
+Flag -p (Mapear Portas Especificamente):
+
+A flag -p (minúscula) permite mapear uma porta específica do host para uma porta específica do container. Por exemplo, -p 8080:80 mapeia a porta 8080 do host para a porta 80 do container.
+Acesso à Aplicação Web:
+
+Após o mapeamento das portas, a aplicação web em execução no container pode ser acessada através do navegador, utilizando o endereço localhost:<porta_mapeada>.
+Comandos Docker:
+
+docker run -d <imagem>: Executa um container em segundo plano.
+docker ps: Lista os containers em execução.
+docker stop <container_id>: Para um container em execução.
+docker rm <container_id>: Remove um container parado.
+docker rm <container_id> --force: Para e remove um container em execução.
+docker port <container_id>: Mostra o mapeamento de portas do container.
+Em resumo, a aula ensina como executar aplicações web em containers Docker e como mapear as portas do container para o host, permitindo o acesso à aplicação através do navegador. As flags -d, -P e -p são explicadas em detalhes, juntamente com os comandos Docker relevantes para gerenciar os containers.
