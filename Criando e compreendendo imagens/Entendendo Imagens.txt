@@ -1,0 +1,3 @@
+Nesta aula, o instrutor Daniel Artine explica detalhadamente o que são imagens no Docker, como elas são estruturadas em camadas e como se transformam em containers. Ele demonstra como inspecionar imagens para entender suas camadas e como o Docker reutiliza essas camadas para otimizar o uso de espaço e recursos.
+
+Além disso, ele explica que os containers são leves porque compartilham as camadas read-only das imagens, adicionando apenas uma camada read-write temporária para armazenar as alterações feitas durante a execução do container.
