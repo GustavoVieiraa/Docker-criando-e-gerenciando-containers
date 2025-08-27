@@ -14,4 +14,10 @@ Os comandos docker pause e docker unpause, que permitem pausar e retomar a execu
 
 Remover um container com o comando docker rm.
 
- iniciar um container já com um terminal interativo usando docker run -it.
+iniciar um container já com um terminal interativo usando docker run -it.
+
+docker stop $(docker container ls -q): Para todos os containers em execução.
+
+docker build -t nome/imagem:tag .: Constrói uma imagem Docker.
+
+docker run -p host_port:container_port -d nome/imagem:tag: Executa um container Docker, mapeando as portas e rodando em modo detached.

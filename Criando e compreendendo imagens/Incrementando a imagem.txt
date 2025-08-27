@@ -1,0 +1,12 @@
+Documentação da Porta:
+Utilização da instrução EXPOSE no Dockerfile para explicitar em qual porta a aplicação está sendo executada. Isso facilita o uso da imagem por outras pessoas, indicando a porta em que a aplicação está disponível.
+
+Leitura de Variável de Ambiente:
+Uso de variáveis de ambiente para parametrizar a porta da aplicação.
+A instrução ARG define um argumento para ser usado durante a construção da imagem (build).
+A instrução ENV define uma variável de ambiente que estará disponível dentro do container em tempo de execução.
+
+Exemplo Prático:
+O ARG é usado para definir um valor padrão para a porta durante o build da imagem.
+O ENV é usado para passar essa variável para dentro do container, permitindo que a aplicação utilize essa porta.
+O EXPOSE é usado para documentar a porta em que a aplicação está exposta.
