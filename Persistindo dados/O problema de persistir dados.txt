@@ -1,0 +1,23 @@
+Nesta aula, o instrutor Daniel Artine aborda o problema da persistência de dados em containers Docker e introduz três soluções principais para lidar com essa questão.
+
+Aqui está um resumo dos principais pontos abordados:
+
+Revisão de Comandos:
+docker ps: Lista os containers em execução.
+docker ps -a: Lista todos os containers, incluindo os parados.
+docker container rm $(docker container ls -aq): Remove todos os containers parados.
+docker images: Lista as imagens disponíveis.
+docker rmi $(docker image ls -aq): Remove todas as imagens.
+docker rmi $(docker image ls -aq) --force: Força a remoção de imagens, mesmo que estejam sendo referenciadas por múltiplos repositórios.
+
+Tamanho do Container:
+Ao executar docker run -it ubuntu bash, um novo container Ubuntu é iniciado em modo interativo.
+O comando docker ps -s exibe o tamanho do container, mostrando tanto o tamanho real quanto o tamanho virtual.
+O tamanho virtual do container é equivalente ao tamanho total da imagem, enquanto o tamanho real reflete as informações adicionadas na camada de read-write do container.
+
+Persistência de Dados:
+É explicado que a camada de read-write de um container não é persistente entre diferentes containers ou após a remoção e recriação de um container.
+São apresentadas três formas principais de persistir informações entre containers:
+  Bind-mount: Vincula o sistema de arquivos do host ao sistema de arquivos do container.
+  Volume: Gerenciado pelo Docker para persistir dados.
+  Tmpfs mount: Montagem temporária.
