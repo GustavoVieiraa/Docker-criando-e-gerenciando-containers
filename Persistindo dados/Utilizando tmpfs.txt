@@ -1,0 +1,13 @@
+Nesta aula, aprendemos sobre o tmpfs, o terceiro tipo de persistência de dados no Docker.
+
+Aqui está um resumo dos principais pontos abordados:
+
+O que é: tmpfs é um sistema de arquivos temporário que armazena dados na memória do host Linux.
+
+Como funciona: Ao contrário dos bind mounts e volumes, os dados em tmpfs não são escritos na camada read-write do container, mas diretamente na memória do host. Isso significa que os dados são perdidos quando o container é interrompido.
+
+Quando usar: tmpfs é útil para armazenar dados sensíveis que não devem ser persistidos, como arquivos de senha ou informações temporárias.
+
+Como usar: tmpfs pode ser usado com a flag --tmpfs ou com a flag --mount, especificando o tipo como tmpfs e o destino como o diretório dentro do container.
+
+Recapitulando: Vimos três tipos de persistência de dados: tmpfs (para dados temporários e sensíveis), bind mounts (para ligar diretamente o sistema de arquivos do host ao container) e volumes (a solução recomendada, gerenciada pelo Docker).
