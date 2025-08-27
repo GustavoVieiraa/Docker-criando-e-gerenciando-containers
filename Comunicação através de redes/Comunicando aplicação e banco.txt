@@ -1,0 +1,19 @@
+Nesta aula, aprendemos como contêineres Docker podem se comunicar através de redes, usando o exemplo de uma aplicação (alura-books) se conectando a um banco de dados (mongo).
+
+Imagens:
+  Foi utilizada a imagem mongo:4.4.6 para o banco de dados e aluradocker/alura-books:1.0 para a aplicação.
+
+Rede Bridge:
+  Foi criada uma rede bridge chamada minha-bridge para permitir a comunicação entre os contêineres.
+
+Execução dos Contêineres:
+  O contêiner do banco de dados foi iniciado com o nome meu-mongo e conectado à rede minha-bridge.
+  O contêiner da aplicação foi iniciado e também conectado à rede minha-bridge, com mapeamento da porta 3000.
+
+Comunicação:
+  A aplicação alura-books foi configurada para procurar um host chamado meu-mongo para se conectar ao banco de dados.
+
+Teste:
+  A aplicação foi acessada através do navegador, e um endpoint /seed foi utilizado para popular o banco de dados
+
+Em resumo, a aula demonstrou como configurar uma comunicação entre uma aplicação e um banco de dados utilizando contêineres Docker na mesma rede, permitindo que eles se comuniquem através do hostname.
