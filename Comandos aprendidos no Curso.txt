@@ -21,3 +21,7 @@ docker stop $(docker container ls -q): Para todos os containers em execução.
 docker build -t nome/imagem:tag .: Constrói uma imagem Docker.
 
 docker run -p host_port:container_port -d nome/imagem:tag: Executa um container Docker, mapeando as portas e rodando em modo detached.
+
+Com a flag -v: docker run -it -v /caminho/no/host:/caminho/no/container ubuntu bash
+
+Com a flag --mount: docker run -it --mount type=bind,source=/caminho/no/host,target=/caminho/no/container ubuntu bash - A flag --mount é a forma mais recomendada, pois é mais semântica.

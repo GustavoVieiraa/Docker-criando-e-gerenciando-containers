@@ -1,0 +1,12 @@
+Nesta aula, aprendemos sobre como persistir dados em containers Docker utilizando bind mounts. Essa solução cria uma ligação entre um diretório no sistema operacional do host e um diretório dentro do container.
+
+Você pode criar um bind mount de duas maneiras:
+
+Com a flag -v: docker run -it -v /caminho/no/host:/caminho/no/container ubuntu bash
+Com a flag --mount: docker run -it --mount type=bind,source=/caminho/no/host,target=/caminho/no/container ubuntu bash
+A flag --mount é a forma mais recomendada, pois é mais semântica.
+
+Com bind mounts, você pode persistir dados entre containers. Isso significa que, se você parar um container e criar um novo, os dados persistidos no diretório do bind mount ainda estarão disponíveis.
+
+No entanto, é importante lembrar que o container depende de um caminho no host. Se o caminho não existir, você não tiver permissão para acessá-lo ou alguém deletar o caminho, você terá problemas.
+
