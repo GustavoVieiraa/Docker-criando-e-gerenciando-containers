@@ -25,3 +25,12 @@ docker run -p host_port:container_port -d nome/imagem:tag: Executa um container 
 Com a flag -v: docker run -it -v /caminho/no/host:/caminho/no/container ubuntu bash
 
 Com a flag --mount: docker run -it --mount type=bind,source=/caminho/no/host,target=/caminho/no/container ubuntu bash - A flag --mount é a forma mais recomendada, pois é mais semântica.
+
+Nomes para Contêineres:
+Foi demonstrado como definir nomes personalizados para os contêineres usando a flag --name durante a execução.
+
+Criação de Redes Bridge:
+Para permitir a comunicação via hostname, foi ensinado como criar uma rede bridge personalizada com o comando docker network create --driver bridge minha-bridge.
+
+Conectando Contêineres à Rede:
+Ao executar os contêineres, eles foram conectados à rede criada usando a flag --network minha-bridge.

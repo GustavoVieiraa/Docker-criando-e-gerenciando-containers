@@ -1,0 +1,18 @@
+Nesta aula, aprendemos como estabelecer uma comunicação mais estável entre contêineres Docker, utilizando nomes em vez de IPs, que podem ser inconsistentes.
+
+Nomes para Contêineres:
+Foi demonstrado como definir nomes personalizados para os contêineres usando a flag --name durante a execução.
+
+Criação de Redes Bridge:
+Para permitir a comunicação via hostname, foi ensinado como criar uma rede bridge personalizada com o comando docker network create --driver bridge minha-bridge.
+
+Conectando Contêineres à Rede:
+Ao executar os contêineres, eles foram conectados à rede criada usando a flag --network minha-bridge.
+
+Comunicação via Hostname:
+Foi demonstrado como os contêineres na mesma rede podem se comunicar usando seus hostnames (por exemplo, ping pong).
+
+Redes User-Defined Bridge:
+A aula explicou que as redes user-defined bridge fornecem resolução automática de DNS entre contêineres, facilitando a comunicação.
+
+Em resumo, a aula ensinou como criar uma rede personalizada para permitir que os contêineres se comuniquem de forma mais estável usando seus nomes, em vez de depender de IPs.
