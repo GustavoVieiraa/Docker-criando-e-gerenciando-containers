@@ -1,0 +1,7 @@
+Nesta aula, aprendemos sobre o Docker Compose, uma ferramenta de coordenação de containers do Docker.
+
+Principais pontos:
+
+Problema: Subir e gerenciar vários containers manualmente pode ser complexo e demorado.
+Solução: O Docker Compose permite definir e coordenar vários containers em um único ambiente através de um arquivo YAML.
+Como funciona: O arquivo YAML define os serviços (containers), redes e configurações necessárias para a aplicação.
