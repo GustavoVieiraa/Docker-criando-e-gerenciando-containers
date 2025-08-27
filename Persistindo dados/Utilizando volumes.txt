@@ -1,0 +1,17 @@
+Nesta aula, aprendemos sobre a utilização de volumes no Docker para persistir dados de forma mais segura e gerenciada.
+
+Principais pontos:
+
+O que são volumes: Áreas gerenciadas pelo Docker no sistema de arquivos, mais seguras para armazenar dados em comparação com bind mounts.
+
+Criação de volumes:
+  Utilizando o comando docker volume create <nome-do-volume>.
+  Automaticamente ao executar um container com a flag --mount source=<nome-do-volume>,target=<diretório-no-container>, caso o volume não exista.
+
+Localização dos arquivos: Os arquivos dos volumes são armazenados em /var/lib/docker/volumes/<nome-do-volume>/_data.
+
+Gerenciamento de volumes: Através do comando docker volume, com opções como create, inspect, ls, prune e rm.
+
+Utilização com --mount: Demonstração de como criar e utilizar volumes de forma mais simples com a flag --mount.
+
+Em resumo, os volumes são uma forma mais robusta e flexível de persistir dados no Docker, permitindo que o próprio Docker gerencie o armazenamento e garantindo maior segurança e portabilidade.
