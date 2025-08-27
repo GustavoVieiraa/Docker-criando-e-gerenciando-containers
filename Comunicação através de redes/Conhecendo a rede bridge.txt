@@ -1,0 +1,7 @@
+Nesta aula, exploramos a comunicação entre contêineres Docker, que são isolados por padrão. Vimos que, apesar desse isolamento, contêineres podem se comunicar entre si, especialmente em sistemas complexos com diversas aplicações.
+
+Foi demonstrado como o Docker utiliza namespaces para isolamento de rede e como ele configura automaticamente uma rede chamada bridge para os contêineres. Ao inspecionar os contêineres, notamos que eles compartilham a mesma rede bridge, o que permite a comunicação entre eles.
+
+Realizamos um experimento prático para testar a comunicação entre contêineres Ubuntu, instalando o utilitário ping e verificando a conectividade via endereço IP. No entanto, foi ressaltado que essa abordagem tem desvantagens, já que os IPs dos contêineres podem mudar, tornando a conexão instável.
+
+Por fim, mencionamos a importância de encontrar uma maneira mais confiável de comunicação, como o uso de DNS ou hostname, e introduzimos a ideia de criar nossa própria rede Docker para um controle mais preciso da comunicação entre contêineres.
