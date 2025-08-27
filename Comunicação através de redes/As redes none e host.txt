@@ -1,0 +1,12 @@
+Nesta aula, exploramos as redes none e host no Docker, complementando nosso entendimento sobre redes em contêineres.
+
+Rede none:
+  Utiliza o driver null.
+  Isola completamente o contêiner da rede, sem nenhuma interface de rede vinculada.
+  O contêiner não consegue realizar operações que envolvam a rede.
+
+Rede host:
+  Remove o isolamento entre a interface de rede do contêiner e do host.
+  O contêiner compartilha a mesma interface de rede do host.
+  É possível acessar a aplicação no contêiner diretamente pela porta, sem mapeamento, pois utiliza a mesma rede do host.
+  Pode causar conflito de portas se outra aplicação no host já estiver utilizando a mesma porta.
