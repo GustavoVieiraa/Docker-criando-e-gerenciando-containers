@@ -1,0 +1,25 @@
+Nesta aula, aprendemos a criar nossa primeira imagem Docker, essencial para empacotar aplicações e garantir que elas rodem de forma consistente em qualquer ambiente.
+
+Fluxo de Criação de Imagem:
+
+Dockerfile:
+Definimos um arquivo chamado Dockerfile que contém as instruções para construir a imagem.
+Usamos uma aplicação Node.js como exemplo (o conteúdo específico da aplicação não é o foco, mas sim o processo de empacotamento).
+Construção da Imagem:
+Utilizamos o comando docker build para criar a imagem a partir do Dockerfile.
+Especificamos um nome e uma tag (versão) para a imagem.
+Execução do Container:
+Usamos o comando docker run para criar um container a partir da imagem.
+Mapeamos as portas do host para as portas do container para acessar a aplicação.
+Instruções do Dockerfile:
+
+FROM: Define a imagem base para a nossa imagem (ex: node:14).
+WORKDIR: Define o diretório de trabalho padrão dentro da imagem.
+COPY: Copia arquivos do host para a imagem.
+RUN: Executa comandos durante a construção da imagem (ex: npm install).
+ENTRYPOINT: Define o comando que será executado quando o container for iniciado (ex: npm start).
+Comandos Docker:
+
+docker build -t nome/app:versão .: Constrói a imagem a partir do Dockerfile no diretório atual.
+docker run -d -p host_port:container_port nome/app:versão: Executa um container em modo detached e mapeia as portas.
+docker images: Lista as imagens disponíveis.
