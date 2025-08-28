@@ -1,0 +1,7 @@
+Nesta aula, aprendemos como coordenar containers utilizando o Docker Compose, definindo dependências entre os serviços para otimizar a ordem de inicialização e evitar logs misturados.
+
+Você pode usar depends_on no arquivo docker-compose.yml para garantir que um serviço seja iniciado somente após a inicialização de outro.
+
+Além disso, vimos como executar os serviços em modo detached (docker-compose up -d), como verificar o status dos serviços (docker-compose ps) e como remover todos os containers e a rede criada (docker-compose down).
+
+Exploramos brevemente a seção deploy da documentação do Docker Compose, que permite configurar o número de réplicas e ajustar o nível de paralelismo (funciona apenas no modo swarm).
