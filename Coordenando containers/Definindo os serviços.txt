@@ -1,0 +1,13 @@
+Nesta aula, aprendemos a transformar os comandos Docker que usamos para executar o Alura Books e o MongoDB em um arquivo docker-compose.yml.
+
+Primeiro, criamos uma pasta chamada ymls na área de trabalho e abrimos o VS Code nessa pasta. Dentro do VS Code, criamos um arquivo chamado docker-compose.yml.
+
+Em seguida, definimos a versão do Docker Compose que vamos utilizar (3.9) e os serviços que serão nossos containers: MongoDB e Alura Books.
+
+Para o MongoDB, definimos a imagem (mongo:4.4.6), o nome do container (meu-mongo) e a rede (compose-bridge).
+
+Para o Alura Books, definimos a imagem (aluradocker/alura-books:1.0), o nome do container (alurabooks), a rede (compose-bridge) e as portas (3000:3000).
+
+Por fim, definimos a rede compose-bridge com o driver bridge.
+
+Para executar o docker-compose.yml, abrimos um terminal no diretório onde o arquivo foi criado e executamos o comando docker-compose up.
